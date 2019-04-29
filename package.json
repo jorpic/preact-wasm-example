@@ -5,25 +5,14 @@
   "license": "MIT",
   "scripts": {
     "wasm": "cd hello-wasm; wasm-pack build; cd -",
-    "build": "npm run wasm && preact build",
-    "dev": "npm run wasm && preact watch",
-    "lint": "eslint src"
+    "build": "npm run wasm && preact build -no-prerender",
+    "dev": "npm run wasm && preact watch"
   },
-  "eslintConfig": {
-    "extends": "eslint-config-synacor"
-  },
-  "eslintIgnore": [
-    "build/*"
-  ],
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-config-synacor": "^1.1.0",
-    "if-env": "^1.0.0",
     "preact-cli": "^3.0.0-rc.1"
   },
   "dependencies": {
     "hello-wasm": "file:hello-wasm/pkg",
-    "preact": "^8.4.2",
-    "preact-compat": "^3.17.0"
+    "preact": "^8.4.2"
   }
 }
