@@ -20,10 +20,10 @@
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
     "if-env": "^1.0.0",
-    "preact-cli": "^2.0.0"
+    "preact-cli": "^3.0.0-rc.1"
   },
   "dependencies": {
-    "preact": "^8.2.1",
+    "preact": "^8.4.2",
     "preact-compat": "^3.17.0"
   }
 }
