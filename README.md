@@ -20,7 +20,8 @@ TypeError: "__webpack_require__.w is undefined"
     fn bundle.esm.js:830
 ```
 
-Seems like something in webpack is not implemented yet: https://github.com/webpack/webpack/issues/7647
+Seems like something in webpack is not implemented yet:
+[webpack/webpack#7647](https://github.com/webpack/webpack/issues/7647).
 
 
 ### Manual module initialization
@@ -51,3 +52,12 @@ Error: magic header not detected
 ...
 ```
 
+Similar problem is described in [webpack/webpack#8412](https://github.com/webpack/webpack/issues/8412). It can be fixed with this simple (yet undocumented) trick:
+
+```JavaScript
+export default (config, env, helpers) => {
+  config.module.defaultRules = [
+    { type: 'javascript/auto', resolve: {} }
+  ];
+}
+```

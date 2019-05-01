@@ -1,3 +1,5 @@
 export default (config, env, helpers) => {
-  // config.resolve.extensions.push(".wasm");
+  config.module.defaultRules = [
+    { type: 'javascript/auto', resolve: {} }
+  ];
 }
