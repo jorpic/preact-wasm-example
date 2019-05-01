@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "wasm": "cd hello-wasm; wasm-pack build; cd -",
+    "wasm": "cd hello-wasm; wasm-pack build --target web; cd -",
     "build": "npm run wasm && preact build -no-prerender",
     "dev": "npm run wasm && preact watch"
   },
   "devDependencies": {
+    "file-loader": "^3.0.1",
     "preact-cli": "^3.0.0-rc.1"
   },
   "dependencies": {
